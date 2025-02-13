@@ -10,6 +10,6 @@
 	<%
 		out.println((String)request.getAttribute("msg"));
 	%>
-	<%@include file="home.html" %>
+	<%@include file="index.html" %>
 </body>
 </html>
