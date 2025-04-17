@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+            backdrop-filter:blur(20px);
+            color:black;
+        }
+        td
+        {
+          color:white;
+          
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="outer">
+	<h1 style="color:white;text-decoration:underline;">Student Marks</h1>
+	<div class="innerr">
+	<form action="sMarks" method="post">
+		Student Roll-No:<input class="insert" type="text" name="sRoll" placeholder="Enter Roll-Number"><br>
+		Student Class:<input class="insert" type="text" name="sClass" placeholder="Enter Class"><br>
+		Student Section:<input class="insert" type="text" name="sSec" placeholder="Enter Section"><br>
+		MIL:<input class="insert" type="text" name="mil" placeholder="Enter MIL Mark"><br>
+		English:<input class="insert" type="text" name="eng" placeholder="Enter English Mark"><br>
+		THL:<input class="insert" type="text" name="thl" placeholder="Enter THL Mark"><br>
+		Math:<input class="insert" type="text" name="math" placeholder="Enter Mathematics Mark"><br>
+		Science:<input class="insert" type="text" name="sci" placeholder="Enter Science Mark"><br>
+		Social-Science:<input class="insert" type="text" name="ssc" placeholder="Enter Social-Science Mark"><br>
+		<input class="one" type="submit" value="Submit" style="width:40%;">
+	</form>
+	<br><br><br><br>
+	<a href="tLogout"><button class="one" style="width:60%;">Logout</button></a>
+	  </div>
+	  </div>
+</body>
+</html>

@@ -1,0 +1,167 @@
+@charset "UTF-8";
+
+body
+{
+	background-image:url("https://media.istockphoto.com/id/1349104991/photo/e-learning-online-education-concept.jpg?s=612x612&w=0&k=20&c=dta2tnpaC95FdcqSy4bpp2tLzBQDTCNajXeLxNsKXoo=");
+	background-repeat:no-repeat;
+	background-size:100% 100%;
+	background-attachment:fixed;
+}
+
+.outer
+{
+	margin:100px;
+	width:auto;
+	place-items:center;
+	opacity:1;
+}
+
+.inner
+{
+	border-radius:5px;
+	margin:50px;
+	text-align:center;
+	height:520px;
+	width:700px;
+	padding-top:50px;
+	backdrop-filter:blur(20px);
+	font-weight:bold;
+	color:white;
+	font-size:20px;
+}
+
+.one
+{
+	width:60%;
+	height:50px;
+	opacity:1;
+	cursor:pointer;
+	border-radius:5px;
+	font-weight:bold;
+	font-size:19px;
+}
+
+.one:hover
+{
+	opacity:0.6;
+	background:linear-gradient(90deg,#3532ec,#800080);
+	color:white;
+}
+
+p{
+	font-size:22px;
+	margin-top:150px;
+}
+
+h1{
+	font-size:40px;
+}
+
+p:hover
+{
+	color:red;
+}
+
+
+.insert
+{
+	width:67%;
+	height:40px;
+	margin:12px;
+	outline:none;
+	border-radius:6px;
+	font-size:18px;
+	font-family:Georgia, serif;
+	padding-left:5px;
+}
+
+.two
+{
+	width:67%;
+	height:50px;
+	opacity:1;
+	cursor:pointer;
+	border-radius:5px;
+	font-weight:bold;
+	font-size:19px;
+	margin-top:80px;
+}
+
+.two:hover
+{
+	opacity:0.6;
+	background:linear-gradient(90deg,#3532ec,#800080);
+	color:white;
+}
+
+.innerr
+{
+	border-radius:5px;
+	margin:50px;
+	text-align:center;
+	height:990px;
+	width:700px;
+	padding-top:50px;
+	backdrop-filter:blur(20px);
+	font-weight:bold;
+	color:white;
+	font-size:20px;
+}
+
+.registerBtn
+{
+	width:50%;
+	height:50px;
+	opacity:1;
+	cursor:pointer;
+	border-radius:10px;
+	font-weight:bold;
+	font-size:19px;
+	margin-top:40px;
+	margin-bottom:30px;
+}
+
+.registerBtn:hover
+{
+	background:linear-gradient(90deg,#a770ef,#cf8bf3,#fdb99b);
+	color:#ffff;
+}
+
+span
+{
+	color:red;
+}
+
+label
+{
+	padding-right:67px;
+}
+
+.innerrr
+{
+	border-radius:5px;
+	margin:50px;
+	text-align:center;
+	height:590px;
+	width:1300px;
+	padding-top:50px;
+	backdrop-filter:blur(20px);
+	font-weight:bold;
+	color:white;
+	font-size:20px;
+}
+
+.refer
+{
+	color:hotpink;
+}
+
+.refer:hover
+{
+	color:blue;
+}
+
+p a:hover
+{
+	color:white;
+}

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="outer">
+		<form action="teachReg" method="post">
+		<div  class="innerr" >
+			<h1>Student Registration</h1>
+			Teacher's Id:<input class="insert" id="tId"type="text" name="tId" placeholder="Enter Id-Number"><br>
+			<span id="errId"></span><br>
+			Teacher Name:<input class="insert" id="tName" type="text" name="tName" placeholder="Enter Your Name"><br>
+			<span id="errname"></span><br>
+			<label for="gen" class="gen">Gender:</label>
+			<input type="radio" name="tGen" value="Male" required>Male &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+			<input type="radio" name="tGen" value="Female" required>Female &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+			<input type="radio" name="tGen" value="Others" required>Others<br>
+			Teacher Subjects:<input class="insert" id="tSub" type="text" name="tSubjects" placeholder="Enter Subjects you teach"><br>
+			<span id="errsub"></span><br>
+			Teacher's Salary:<input class="insert" id="tSal" type="text" name="tSalary" placeholder="Enter Your Salary"><br>
+			<span id="errsal"></span><br>
+			Teacher's DOB:<input class="insert" id="tDob" type="date" name="sDob" placeholder="Enter Your Date-Of-Birth" required><br>
+			<span id="errdob"></span><br>
+			Teacher's Address:<input class="insert" id="tAddr" type="text" name="tAddr" placeholder="Enter Your Address"><br>
+			<span id="erradd"></span><br>
+			Teacher's Contact:<input class="insert" id="tContact" type="text" name="tContact" placeholder="Enter Contact Number"><br>
+			<span id="errcontact"></span><br>
+			Teacher's Mail-Id:<input class="insert" id="tMid" type="email" name="tMid" placeholder="Enter Your Mail-id" required><br>
+			<span id="errmail"></span><br>
+			<input class="registerBtn" type="submit" value="Register">
+			</div>
+		</form>
+		<script type="text/javascript">
+			document.forms[0].addEventListener("submit",checkData);
+			function checkData(frm)
+			{
+				//Id-verification
+				let id=document.getElementById("tId").value;
+				const idexp=/^\d{1,3}$/;
+				if(idexp.test(id)==false||id=="")
+					{
+					frm.preventDefault();
+					document.getElementById("errId").innerHTML="invalid id-number";
+					}
+				else
+				{
+					document.getElementById("errId").innerHTML="";
+				}
+				
+				
+				//Name-Verification
+				let name=document.getElementById("tName").value;
+				const nameexp=/^[A-Za-z ]*$/;
+				if(nameexp.test(name)==false||name=="")
+					{
+					frm.preventDefault();
+					document.getElementById("errname").innerHTML="Invalid name";
+					}
+				else
+					{
+					document.getElementById("errname").innerHTML="";
+					}
+				
+				//Subjects
+				let subject=document.getElementById("tSub").value;
+				const subexp = /^[A-Z][a-z]*(\s[A-Z][a-z]*)*(\s*,\s*[A-Z][a-z]*(\s[A-Z][a-z]*)*)*$/;
+				if(subexp.test(subject)==false||subject=="")
+					{
+					frm.preventDefault();
+					document.getElementById("errsub").innerHTML="Invalid Subjects";
+					}
+				else
+					{
+					document.getElementById("errsub").innerHTML="";
+					}
+				
+				//Salary-Verification
+				let salary=document.getElementById("tSal").value;
+				const salexp=/^\d{1,5}\.\d{1,2}?$/;
+				if(salexp.test(salary)==false||salary=="")
+					{
+					frm.preventDefault();
+					document.getElementById("errsal").innerHTML="i.e 10000.00/invalid Salary";
+					}
+				else
+					{
+					document.getElementById("errsal").innerHTML="";
+					}
+				
+				//Contact-verification
+				let contact=document.getElementById("tContact").value;
+				const contexp=/^[6789]\d{9}$/;
+				if(contexp.test(contact)==false||contact=="")
+					{
+					frm.preventDefault();
+					document.getElementById("errcontact").innerHTML="Invalid Contact-Number";
+					}
+				else
+					{
+					document.getElementById("errcontact").innerHTML="";
+					}
+				
+				//Dob
+				let dob=document.getElementById("tDob").value;
+				let nDob=new Date(dob);
+				let cDate=new Date();
+				if(cDate.getFullYear()-nDob.getFullYear()<18)
+					{
+					frm.preventDefault();
+					document.getElementById("errdob").innerHTML="Invalid age(age must be more than 18)";
+					}
+				else
+					{
+					document.getElementById("errdob").innerHTML="";
+					}
+				
+				//address
+				let add=document.getElementById("tAddr").value;
+				const addexp=/^(?=.*[a-z ])(?=.*[A-Z ])(?=.*\d)(?=.*[,-]).{10,100}$/;
+				if(addexp.test(add)==false||add=="")
+					{
+					frm.preventDefault();
+					document.getElementById("erradd").innerHTML="Enter valid address";
+					}
+				else
+					{
+					document.getElementById("erradd").innerHTML="";
+					}
+			}
+		</script>
+	</div>
+</body>
+</html>
